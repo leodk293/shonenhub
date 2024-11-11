@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import logo from './shonenhub.png'
 import Image from 'next/image'
+import Eye from './eye.png'
 
 const Logo = () => {
     return (
@@ -9,11 +9,11 @@ const Logo = () => {
             <div className='flex flex-row gap-2'>
                 <h1 className=' self-center'>Shonenhub</h1>
                 <Image
-                    src={logo}
+                    src={Eye}
                     alt='SHONENHUB LOGO'
-                    width={60}
+                    width={50}
                     height={50}
-                    className=' rounded-[50%] object-cover'
+                    className=' object-cover'
                 />
             </div>
         </Link>

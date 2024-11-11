@@ -102,7 +102,7 @@ const Page = ({ params }) => {
               animeData.data &&
 
               <main className=' flex flex-col items-center gap-5'>
-                <h1 className='text-purple-700 text-xl font-bold text-center md:text-5xl'>{animeData.data.title} ({animeData.data.title_japanese})</h1>
+                <h1 className='text-purple-700 text-xl font-bold text-center md:text-3xl md:w-[1000px] md:leading-9'>{animeData.data.title} ({animeData.data.title_japanese})</h1>
                 <div className=' flex flex-wrap justify-center mt-10 gap-5 '>
 
                   <Image

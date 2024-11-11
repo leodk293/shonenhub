@@ -22,7 +22,7 @@ const Page = async () => {
                 .select()
                 .from(usersTable)
                 .where(eq(usersTable.email, email))
-                .get();  
+                .get();
 
             if (!existingUser) {
                 await db.insert(usersTable).values({ name, age, email });
@@ -36,7 +36,7 @@ const Page = async () => {
     }
 
     const users = await getAllUsers();
-    //console.log(users);
+    console.log(users);
 
     if (session) {
         await storeUserIfNew();

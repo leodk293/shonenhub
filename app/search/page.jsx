@@ -87,8 +87,8 @@ export default function Page() {
             ) : (
                 <div className='flex flex-col mt-[150px] items-center gap-5'>
                     <div className=' flex flex-col gap-3'>
-                        <h1 className='text-2xl text-violet-950 font-bold md:text-5xl'>Results for <span className=' uppercase font-extrabold'>{animeName}</span></h1>
-                        <span className=' w-auto h-[3px] rounded-[5px] bg-violet-950 md:w-[65rem]'></span>
+                        <h1 className='text-2xl text-violet-700 font-bold md:text-4xl'>Search results for <span className=' uppercase font-extrabold'>{animeName}</span></h1>
+                        <span className=' w-auto h-[3px] rounded-[5px] bg-violet-700 md:w-[65rem]'></span>
                     </div>
 
                     <div className='w-auto mt-[50px] flex flex-wrap gap-5 justify-center md:w-[70rem]'>

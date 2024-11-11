@@ -55,7 +55,7 @@ const Nav = () => {
             <div className=' flex flex-row gap-5'>
                 <Link className='self-center' href='/signin'>
                     <button
-                        className='self-center text-[20px] border border-transparent bg-red-950 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-red-900 duration-200'
+                        className='self-center text-[20px] border border-transparent bg-red-800 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-red-700 duration-200'
                     >
                         Signin
                     </button>
@@ -63,7 +63,7 @@ const Nav = () => {
 
                 <Link className='self-center' href='/contact'>
                     <button
-                        className='self-center text-[20px] border border-transparent bg-[#0f1855] w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-blue-800 duration-200'
+                        className='self-center text-[20px] border border-transparent bg-[#1a2a8d] w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-blue-700 duration-200'
                     >
                         Contact us
                     </button>
