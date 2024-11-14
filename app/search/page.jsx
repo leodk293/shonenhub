@@ -79,13 +79,13 @@ export default function Page() {
     return (
         <>
             {searchedAnime.error === true ? (
-                <p className='text-center mt-[100px] text-orange-700 font-bold text-5xl h-[35rem]'>
+                <p className='text-center mt-[100px] text-red-700 font-bold text-5xl h-[35rem]'>
                     Something went wrong
                 </p>
             ) : searchedAnime.loading === true ? (
-                <p className='text-center mt-[100px] text-red-700 font-bold text-5xl h-[35rem]'>Loading...</p>
+                <p className='text-center mt-[100px] text-orange-700 font-bold text-5xl h-[35rem]'>Loading...</p>
             ) : (
-                <div className='flex flex-col mt-[150px] items-center gap-5'>
+                <div className='flex flex-col mt-[240px] items-center gap-5 md:mt-[150px]'>
                     <div className=' flex flex-col gap-3'>
                         <h1 className='text-2xl text-violet-700 font-bold md:text-4xl'>Search results for <span className=' uppercase font-extrabold'>{animeName}</span></h1>
                         <span className=' w-auto h-[3px] rounded-[5px] bg-violet-700 md:w-[65rem]'></span>
@@ -97,8 +97,7 @@ export default function Page() {
                                 <Link key={anime.mal_id} href={`/anime/${anime.mal_id}`}>
 
                                     <Image
-                                        style={{ borderRadius: "5px 5px 0 0" }}
-                                        className='border-2 border-gray-400 object-cover hover:brightness-50 duration-300 md:h-[23rem]'
+                                        className='border-2 border-gray-400 w-[150px] hover:brightness-50 duration-300 object-cover md:rounded-tl-[5px] md:rounded-tr-[5px] md:w-[250px] md:h-[23rem]'
                                         width={250}
                                         height={200}
                                         src={anime.images.jpg.large_image_url}
@@ -108,15 +107,14 @@ export default function Page() {
                                 </Link>
 
                                 <div
-                                    style={{ borderRadius: "0 0 5px 5px" }}
-
-                                    className="border border-t-transparent border-gray-400 bg-slate-950 text-white p-2 h-[60px] overflow-hidden overflow-y-scroll"
+                                    className="border border-t-transparent border-gray-400 bg-slate-950 text-white p-2 h-[60px] radius hidden overflow-hidden overflow-y-scroll md:block"
                                 >
                                     <p className="w-[230px] text-slate-200 font-semibold">
                                         {anime.title}
                                     </p>
                                 </div>
 
+                                <p className=' text-white w-[100px] block md:hidden'>{anime.title}</p>
 
                             </div>
                         ))}

@@ -78,8 +78,7 @@ export default function page() {
                     <Link key={anime.mal_id} href={`/anime/${anime.mal_id}`}>
 
                       <Image
-                        style={{ borderRadius: "5px 5px 0 0" }}
-                        className='border-2 border-gray-400 object-cover hover:brightness-50 duration-300 md:h-[23rem]'
+                        className='border-2 border-gray-400 w-[150px] hover:brightness-50 duration-300 object-cover md:rounded-tl-[5px] md:rounded-tr-[5px] md:w-[250px] md:h-[23rem]'
                         width={250}
                         height={200}
                         src={anime.images.jpg.large_image_url}
@@ -89,14 +88,14 @@ export default function page() {
                     </Link>
 
                     <div
-                      style={{ borderRadius: "0 0 5px 5px" }}
-
-                      className="border border-t-transparent border-gray-400 bg-slate-950 text-white p-2 h-[60px] overflow-hidden overflow-y-scroll"
+                      className="border border-t-transparent border-gray-400 bg-slate-950 text-white p-2 h-[60px] radius hidden overflow-hidden overflow-y-scroll md:block"
                     >
                       <p className="w-[230px] text-slate-200 font-semibold">
                         {anime.title}
                       </p>
                     </div>
+
+                    <p className=' text-white w-[100px] block md:hidden'>{anime.title}</p>
 
 
                   </div>

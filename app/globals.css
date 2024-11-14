@@ -29,19 +29,23 @@ body {
 }
 
 .scrollbar-custom::-webkit-scrollbar {
-  height: 8px; 
+  height: 8px;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #7e7e7e; 
+  background-color: #7e7e7e;
   border-radius: 10px;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-  background-color: #adadad; 
+  background-color: #adadad;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  background-color: #3333338c; 
+  background-color: #3333338c;
   border-radius: 10px;
+}
+
+.radius {
+  border-radius: 0 0 5px 5px;
 }

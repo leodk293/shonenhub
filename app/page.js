@@ -103,7 +103,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-col mt-10 items-center mx-5 md:mx-0">
+    <main className="flex flex-col mt-[200px] items-center mx-5 md:mx-0 md:mt-10">
 
       <div className=" flex flex-col mt-[100px] items-center gap-5 text-white">
         <h1 className="text-3xl text-violet-950 mt-10 font-extrabold md:text-5xl md:mt-0">
@@ -169,7 +169,7 @@ export default function Home() {
         </p>
 
         <div className=" mt-10 flex flex-col gap-5">
-          <h1 className=" text-white font-bold text-xl md:text-3xl">Most recommended anime ✨</h1>
+          <h1 className=" text-white font-bold text-xl md:text-3xl">Most recommended anime ⛩️</h1>
           {
             recommendedAnime.error === true ?
               <p className=' text-center mt-2 text-white font-bold text-xl'>Something went wrong</p>
@@ -207,12 +207,12 @@ export default function Home() {
           }
 
           <div className=" mt-10 flex flex-col gap-5">
-            <h1 className="text-white font-bold text-xl md:text-3xl">Discover some amazing characters</h1>
+            <h1 className="text-white font-bold text-xl md:text-3xl">Discover some amazing characters ㊝</h1>
 
             {topChrts.error === true ?
-              <p className=' text-center mt-2 text-white font-bold text-xl'>Something went wrong</p> :
+              <p className=' text-center mt-2 text-red-700 font-bold text-xl'>Something went wrong</p> :
               topChrts.loading === true ?
-                <p className=' text-center mt-2 text-white font-bold text-xl'>Loading...</p> :
+                <p className=' text-center mt-2 text-orange-700 font-bold text-xl'>Loading...</p> :
                 (
                   topChrts.data &&
                   <div
@@ -248,38 +248,14 @@ export default function Home() {
 
       </div>
 
-      {/* <div className="flex flex-col gap-2 w-auto mt-[50px] md:w-[1000px]">
-        <p className="text-[17px] text-gray-400">Shonenhub is a free anime website where you can be aware about the best anime of the moment.</p>
-
-        <p className="text-[17px] mt-2 text-gray-400">Shonenhub provides users with various genres including Action, Comedy, Demons, Drama, Historical,
-          Romance, Samurai, School, Shoujo Ai, Shounen Supernatural, etc. This is the perfect place to expand
-          the imagination of children under 12 years old as well as spread beautiful images of friendship, family,
-          teammates, magic, etc. Shonenhub is committed to keeping you updated with the latest releases.
-        </p>
-
-        <h1 className="text-2xl font-bold mt-5 text-white md:text-3xl">Is there a Shonenhub app?</h1>
-
-        <p className="text-[17px] text-gray-400">Currently there is no app version of Shonenhub, we do not have any ios Shonenhub app or Shonenhub android apk.</p>
-
-        <h1 className="text-2xl font-bold mt-5 text-white md:text-3xl">Is Shonenhub no ads guaranteed?</h1>
-
-        <p className="text-[17px] text-gray-400">Yes, as you can see Shonenhub website currently comes with no Ads.</p>
-
-        <h1 className="text-2xl font-bold mt-5 text-white md:text-3xl">Is Shonenhub safe?</h1>
-
-        <p className="text-[17px] text-gray-400">We haven't received any report regarding the site's security. However, for your utmost safety, you should take precautionary measures such as a VPN to stay anonymous, anti-virus program and AdBlock extension to avoid ads and popups.</p>
-
-        <h1 className="text-2xl font-bold mt-5 text-white md:text-3xl">Best alternative to 9anime</h1>
-
-        <p className="text-[17px] text-gray-400">Although we are confident to provide you with the best informations about best anime, it is only wise to have more options
-          in case bad things happen. Some other reliable and safe free anime sites you can bookmark include <Link className="text-gray-100" target="_blank" href={'https://ww8.gogoanimes.org/'}>gogoanime</Link>, <Link className="text-gray-100" target="_blank" href={'https://zorotv.link/'}>zorotv</Link>, and <Link className="text-gray-100" target="_blank" href={'https://animeheaven.me/'}>anime heaven</Link> .
-        </p>
-
-      </div> */}
-
       <Link className="mt-[80px]" href={'/home'}>
         <button className="text-white outline-none border border-transparent rounded-[5px] px-8 py-3 text-2xl bg-[#5a2e98] hover:translate-x-2 duration-300">Go to home page</button>
       </Link>
+
+      <h1
+       className=" mt-10 text-white font-bold text-xl">
+        For any further information, please <Link className="text-purple-700 hover:text-purple-600 duration-200" href={'/contact'}>Contact us</Link>
+        </h1>
 
     </main>
   );

@@ -5,20 +5,12 @@ import Logo from './logo/Logo';
 import { Search } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
+
 const Nav = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [animeName, setAnimeName] = useState("");
+
     const router = useRouter();
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
+    
     const handleSubmit = (event) => {
         event.preventDefault();
         if (animeName.trim()) {
@@ -28,9 +20,8 @@ const Nav = () => {
     };
 
     return (
-        <header
-            className={`flex flex-wrap border border-transparent shadow z-50 fixed top-0 w-full justify-center p-3 gap-5 
-                ${isScrolled ? "bg-[#000000f3] duration-500" : ""} md:justify-around md:gap-0`}
+        <div
+            className=' flex flex-wrap gap-5 justify-center md:gap-[5rem]'
         >
             <Logo />
 
@@ -52,7 +43,10 @@ const Nav = () => {
                 />
             </form>
 
-            <div className=' flex flex-row gap-5'>
+            {/* <div className=' flex flex-wrap justify-center gap-5'>
+                <div className=' self-center'>
+                    
+                </div>
                 <Link className='self-center' href='/signin'>
                     <button
                         className='self-center text-[20px] border border-transparent bg-red-800 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-red-700 duration-200'
@@ -68,9 +62,9 @@ const Nav = () => {
                         Contact us
                     </button>
                 </Link>
-            </div>
+            </div> */}
 
-        </header>
+        </div>
     );
 };
 

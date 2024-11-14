@@ -78,20 +78,20 @@ export default function Page({ params }) {
     return (
         <>
             <Link className=" hidden md:block" href={'/home'}>
-                <button className='border border-transparent px-5 py-2 bg-sky-950 text-xl flex flex-row gap-2 font-bold rounded-[5px] fixed text-white md:ml-10'>
+                <button className='border border-transparent px-5 py-2 bg-sky-950 text-xl flex flex-row gap-2 font-bold rounded-[5px] fixed text-white md:ml-10 hover:translate-x-[-10px] duration-200'>
                     <MoveLeft className=" self-center" size={20} color="#ffffff" strokeWidth={3} />
                     <p className=" self-center">Go Back Home</p>
                 </button>
             </Link>
             {!episodData.error ? (
-                <main className='flex flex-col gap-10 mt-[150px]'>
+                <main className='flex flex-col items-center gap-10 mt-[200px] md:mt-[150px]'>
 
-                    <h1 className='text-center font-extrabold font-serif text-2xl mx-5 translate-y-[100px] text-purple-700 md:text-5xl md:mx-0 md:translate-y-0'>
+                    <h1 className='text-center font-extrabold font-sans text-2xl mx-5 translate-y-[100px] text-purple-700 md:text-5xl md:w-[50rem] md:mx-0 md:translate-y-0'>
                         {episodData.animeTitle}
                     </h1>
                     <div className='flex flex-col mt-[100px] gap-5 w-auto self-center mx-3 md:mx-0 md:w-[50rem]'>
                         <div className='flex flex-row gap-3'>
-                            <h1 className='text-white self-center text-2xl'>Filter Episod : </h1>
+                            <h1 className='text-white font-semibold self-center text-2xl'>Filter Episod : </h1>
                             <select
                                 onChange={(event) => setCurrentEpisod(parseInt(event.target.value))}
                                 className='self-center p-1 text-white text-[20px] border border-transparent bg-slate-900 rounded-[5px] cursor-pointer'>
@@ -104,7 +104,7 @@ export default function Page({ params }) {
                         {(summaryData.error === false && summaryData.episodTitle) ? (
                             <p className='text-left text-xl text-white md:text-3xl md:text-center'>Episod {currentEpisod} : <span className='text-sky-800 font-bold'>{summaryData.episodTitle}</span></p>
                         ) : (
-                            <p className='text-white text-center text-3xl'>Waiting...</p>
+                            <p className='text-white font-bold text-center text-3xl'>Waiting for a response</p>
                         )}
 
 
@@ -126,7 +126,7 @@ export default function Page({ params }) {
                         {(summaryData.error === false && summaryData.synopsis) ? (
                             <p className='text-white text-[20px] px-5 leading-8'>{summaryData.synopsis}</p>
                         ) : (
-                            <p className='text-white h-[15rem] text-[20px]'>Waiting...</p>
+                            <p className='text-white font-bold h-[15rem] text-[20px]'>Waiting for a response...</p>
                         )}
 
 

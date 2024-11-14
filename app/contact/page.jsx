@@ -13,7 +13,7 @@ const Page = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", '1b295b17-3634-4de0-ae5e-24b558162576');
+        formData.append("access_key", process.env.NEXT_PUBLIC_WEB3_API);
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -38,7 +38,7 @@ const Page = () => {
             <div className=' flex flex-wrap gap-8'>
 
                 <div className='border border-[#ffffff6f] rounded-[10px] bg-[#0000003f] p-5 flex flex-wrap justify-center gap-10 mx-2 md:mx-0'>
-                    <div className='flex flex-col text-white gap-5 self-start pt-5'>
+                    <div className='flex flex-col text-white gap-5 mt-2'>
                         <h1 className=' text-4xl font-bold text-white'>Let's stay in touch</h1>
 
                         <div className=' flex flex-row gap-1'>

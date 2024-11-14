@@ -22,7 +22,7 @@ export default function layout({ children }) {
 
             </div>
 
-            <div className='block md:hidden'>
+            <div className='block mt-[65px] md:hidden md:mt-0'>
 
                 <div className=' flex flex-row gap-5 border border-gray-50 bg-[#0000009d] rounded-[50px] p-5'>
                     <Link className={`border border-transparent p-1 rounded-[50px] duration-500 ${path === "/home" ? "bg-white text-black" : "text-white"}`} href={'/home'}>Top Anime</Link>
