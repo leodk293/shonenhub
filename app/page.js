@@ -5,7 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Typewriter } from 'react-simple-typewriter'
 import { useState, useEffect } from "react";
+import {Lilita_One} from 'next/font/google'
 import './globals.css'
+
+const lilita = Lilita_One({
+  weight:'400',
+  subsets:['latin']
+})
 
 export default function Home() {
 
@@ -106,7 +112,7 @@ export default function Home() {
     <main className="flex flex-col mt-[200px] items-center mx-5 md:mx-0 md:mt-10">
 
       <div className=" flex flex-col mt-[100px] items-center gap-5 text-white">
-        <h1 className="text-3xl text-violet-950 mt-10 font-extrabold md:text-5xl md:mt-0">
+        <h1 className={` ${lilita.className} text-3xl text-violet-950 mt-10 font-extrabold md:text-5xl md:mt-0`}>
 
           <Typewriter
             words={['Welcome to Shonenhub']}

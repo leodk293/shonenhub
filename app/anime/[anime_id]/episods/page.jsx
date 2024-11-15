@@ -2,6 +2,12 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { MoveLeft } from 'lucide-react';
+import { Outfit } from 'next/font/google';
+
+const outfit = Outfit({
+    weight:'800',
+    subsets:['latin-ext']
+})
 
 export default function Page({ params }) {
     const [episodData, setEpisodData] = useState({
@@ -86,7 +92,7 @@ export default function Page({ params }) {
             {!episodData.error ? (
                 <main className='flex flex-col items-center gap-10 mt-[200px] md:mt-[150px]'>
 
-                    <h1 className='text-center font-extrabold font-sans text-2xl mx-5 translate-y-[100px] text-purple-700 md:text-5xl md:w-[50rem] md:mx-0 md:translate-y-0'>
+                    <h1 className={`text-center ${outfit.className} font-extrabold font-sans text-2xl mx-5 translate-y-[100px] text-purple-700 md:text-5xl md:w-[50rem] md:mx-0 md:translate-y-0`}>
                         {episodData.animeTitle}
                     </h1>
                     <div className='flex flex-col mt-[100px] gap-5 w-auto self-center mx-3 md:mx-0 md:w-[50rem]'>
