@@ -96,7 +96,7 @@ const Page = ({ params }) => {
     }
   }
 
-  const [recommended, setRecommended] = useState(undefined)
+  const [recommended, setRecommended] = useState([])
 
   async function getRecommended() {
     try {
@@ -110,15 +110,9 @@ const Page = ({ params }) => {
     }
     catch (error) {
       console.log(error.message);
-      setRecommended(undefined)
+      setRecommended([])
     }
   }
-
-  /*useEffect(() => {
-    fetchAnimeData();
-    fetchCharacters();
-    getRecommended();
-  }, [params.anime_id]);*/
 
   useEffect(() => {
     fetchAnimeData();
@@ -156,7 +150,7 @@ const Page = ({ params }) => {
                       className='border bg-gray-100 w-[250px] border-1 border-gray-100 rounded-[5px] object-cover md:w-[400px] '
                       alt={animeData.data.title}
                       src={animeData.data.images.jpg.large_image_url}
-                      
+
                     />
 
                     <div className='flex flex-col font-normal mt-2 gap-5 md:font-semibold'>
@@ -329,14 +323,12 @@ const Page = ({ params }) => {
                     }
                   </div>
 
-                  {
 
-                    recommended ?
-                      recommended &&
+                  {
+                    recommended.length > 0
+                      ?
                       <div className=' mt-5 flex flex-col gap-10'>
                         <div className=' flex flex-col gap-2'>
-                          {/* <h1 className=' text-violet-950 text-2xl font-bold md:text-3xl'>You love {animeData.data.title} ?</h1> */}
-
                           <div className=' flex flex-col gap-2'>
                             <p className=' text-purple-900 text-xl font-extrabold md:text-4xl'>These ones can please you !!!</p>
                             <span className=' hidden w-[60rem] h-[3px] rounded-[10px] bg-purple-900 md:block'></span>
@@ -365,11 +357,15 @@ const Page = ({ params }) => {
                           }
                         </div>
 
-                      </div> :
-                      <p className=' text-orange-900 font-bold text-center text-2xl'>Loading...</p>
+                      </div>
+                      :
+                      null
                   }
                 </main>
-                : <p className=' text-orange-900 font-bold text-xl text-center h-[20rem] md:text-4xl'>Something went wrong, refresh the page</p>
+                :
+                <p className=' text-orange-900 font-bold text-xl text-center h-[20rem] md:text-4xl'>
+                  Something went wrong, refresh the page
+                </p>
             )
       }
 

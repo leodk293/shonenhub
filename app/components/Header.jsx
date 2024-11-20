@@ -33,7 +33,7 @@ export default async function Header() {
     }
 
     const users = await getAllUsers();
-    console.log(users);
+    //console.log(users);
 
     if (session) {
         await storeUserIfNew();
@@ -49,7 +49,7 @@ export default async function Header() {
             <div className=' flex flex-wrap justify-center gap-3'>
                 <Link className='self-center' href='/contact'>
                     <button
-                        className='self-center text-[20px] border border-transparent bg-purple-950 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-purple-800 duration-200'
+                        className='self-center text-[17px] border border-transparent bg-purple-950 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-purple-800 duration-200'
                     >
                         Contact us
                     </button>
@@ -59,6 +59,7 @@ export default async function Header() {
                     !session?.user
                         ?
                         <form
+                            className=' self-center'
                             action={async () => {
                                 "use server";
                                 await signIn('google');
@@ -66,26 +67,27 @@ export default async function Header() {
                             }}
                         >
                             <button
-                                className='self-center text-xl border border-transparent bg-red-800 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-red-700 duration-200 md:text-2xl'
+                                className='self-center text-[17px] border border-transparent bg-red-800 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-red-700 duration-200'
                             >
                                 Signin
                             </button>
                         </form>
                         :
-                        <div className=' flex flex-wrap justify-center gap-3'>
+                        <div className=' self-center flex flex-wrap justify-center gap-3'>
                             <form
+                                className=' self-center'
                                 action={async () => {
                                     "use server";
                                     await signOut();
                                 }}
                             >
                                 <button
-                                    className=' border border-transparent text-white rounded-[50px] bg-blue-900 px-5 py-2 font-semibold text-xl flex flex-row hover:bg-blue-700 duration-200 md:text-2xl'
+                                    className=' self-center border border-transparent text-white rounded-[50px] bg-blue-900 px-5 py-2 font-semibold text-[15px] flex flex-row hover:bg-blue-700 duration-200'
                                 >
                                     Signout
                                 </button>
                             </form>
-                            <div className=' flex flex-wrap gap-2'>
+                            <div className=' self-center border border-gray-400 px-4 py-2 rounded-[50px] flex flex-wrap gap-2'>
                                 <Image
                                     src={session.user?.image}
                                     alt={session.user?.name}

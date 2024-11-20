@@ -16,22 +16,25 @@ const Footer = () => {
 
                 <div className=" flex flex-row gap-2 self-start">
                     <Link
+                        target='_blank'
                         className="border border-transparent p-1 bg-[#0A66C2] rounded-[5px] hover:bg-[#16165c] duration-200"
-                        href={'/'}>
+                        href={'https://www.linkedin.com/in/aboubacar-traore-495736252/'}>
                         <Linkedin size={30} color="#ffffff" strokeWidth={1.25}
                         />
                     </Link>
 
                     <Link
+                        target='_blank'
                         className="border border-transparent p-1 bg-[#1DA1F2] rounded-[5px] hover:bg-[#16165c] duration-200"
-                        href={'/'}
+                        href={'https://x.com/Aboubac48530295'}
                     >
                         <Twitter size={30} color="#ffffff" strokeWidth={1.25} />
                     </Link>
 
                     <Link
+                        target='_blank'
                         className="border border-transparent p-1 bg-[#1877F2] rounded-[5px] hover:bg-[#16165c] duration-200"
-                        href={'/'}
+                        href={'https://www.facebook.com/profile.php?id=100092315485742'}
                     >
                         <Facebook size={30} color="#ffffff" strokeWidth={1.25} />
                     </Link>

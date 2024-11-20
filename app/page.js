@@ -5,12 +5,14 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Typewriter } from 'react-simple-typewriter'
 import { useState, useEffect } from "react";
-import {Lilita_One} from 'next/font/google'
+import { Lilita_One } from 'next/font/google'
+import tabAnime from "./components/animeList";
+
 import './globals.css'
 
 const lilita = Lilita_One({
-  weight:'400',
-  subsets:['latin']
+  weight: '400',
+  subsets: ['latin']
 })
 
 export default function Home() {
@@ -108,6 +110,13 @@ export default function Home() {
     getTopChrts();
   }, [])
 
+  useEffect(() => {
+    const charactersTimeout = setTimeout(() => getTopChrts(), 2000);
+    return () => {
+      clearTimeout(charactersTimeout);
+    };
+  }, []);
+
   return (
     <main className="flex flex-col mt-[200px] items-center mx-5 md:mx-0 md:mt-10">
 
@@ -130,6 +139,7 @@ export default function Home() {
 
       <form onSubmit={handleSubmit} className="flex flex-row mt-5 " action="">
         <input
+          list="anime"
           style={{ borderRadius: "10px 0 0 10px" }}
           className=" text-white uppercase font-bold outline-none text-[20px] w-auto py-5 px-8 border-transparent bg-[#1c1c1c] placeholder:capitalize md:w-[600px]"
           type="text"
@@ -137,6 +147,15 @@ export default function Home() {
           value={animeName}
           onChange={(e) => setAnimeName(e.target.value)}
         />
+        <datalist id="anime">
+          {tabAnime.map((element, index) => (
+            <option
+              key={index}
+              value={element}
+            />
+          ))}
+        </datalist>
+
         <button style={{ borderRadius: "0 10px 10px 0" }} className="border px-5 border-transparent bg-[#5a2e98] hover:bg-violet-800 duration-300">
           <Search className=" invert" size={28} strokeWidth={2.75} />
         </button>
@@ -148,13 +167,25 @@ export default function Home() {
         <p className="text-white text-[17px]">Connect with us</p>
 
         <div className=" flex flex-wrap gap-2">
-          <Link className="border border-transparent p-1 bg-[#0A66C2] rounded-[5px] hover:bg-[#16165c] duration-200" href={'/'}>
+          <Link
+            target='_blank'
+            className="border border-transparent p-1 bg-[#0A66C2] rounded-[5px] hover:bg-[#16165c] duration-200"
+            href={'https://www.linkedin.com/in/aboubacar-traore-495736252/'}
+          >
             <Linkedin size={30} color="#ffffff" strokeWidth={1.25} />
           </Link>
-          <Link className="border border-transparent p-1 bg-[#1DA1F2] rounded-[5px] hover:bg-[#16165c] duration-200" href={'/'}>
+          <Link
+            target='_blank'
+            className="border border-transparent p-1 bg-[#1DA1F2] rounded-[5px] hover:bg-[#16165c] duration-200"
+            href={'https://x.com/Aboubac48530295'}
+          >
             <Twitter size={30} color="#ffffff" strokeWidth={1.25} />
           </Link>
-          <Link className="border border-transparent p-1 bg-[#1877F2] rounded-[5px] hover:bg-[#16165c] duration-200" href={'/'}>
+          <Link
+            target='_blank'
+            className="border border-transparent p-1 bg-[#1877F2] rounded-[5px] hover:bg-[#16165c] duration-200"
+            href={'https://www.facebook.com/profile.php?id=100092315485742'}
+          >
             <Facebook size={30} color="#ffffff" strokeWidth={1.25} />
           </Link>
         </div>
@@ -259,9 +290,9 @@ export default function Home() {
       </Link>
 
       <h1
-       className=" mt-10 text-white font-bold text-xl">
+        className=" mt-10 text-white font-bold text-xl">
         For any further information, please <Link className="text-purple-700 hover:text-purple-600 duration-200" href={'/contact'}>Contact us</Link>
-        </h1>
+      </h1>
 
     </main>
   );
