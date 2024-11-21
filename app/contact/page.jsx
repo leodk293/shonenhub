@@ -13,7 +13,7 @@ const Page = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", '1b295b17-3634-4de0-ae5e-24b558162576');
+        formData.append("access_key", process.env.NEXT_PUBLIC_WEB3_API);
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
