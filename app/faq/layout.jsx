@@ -1,4 +1,8 @@
 import React from 'react'
+export const metadata = {
+    title: 'FAQ | Shonenhub',
+    description: ''
+}
 
 const layout = ({ children }) => {
     return (
