@@ -7,6 +7,7 @@ import { Phone, Mail, SendHorizontal } from 'lucide-react';
 
 const Page = () => {
     const [result, setResult] = useState("");
+    console.log(process.env.NEXT_PUBLIC_WEB3_API)
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -103,8 +104,8 @@ const Page = () => {
                     width={200}
                     height={100}
                     className=' object-cover hidden md:block'
+                    alt='Kakashi'
                 />
-
 
             </div>
 
