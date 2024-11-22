@@ -4,8 +4,6 @@ export default function Page() {
     return (
         <main className='mt-[280px] flex flex-col items-center mx-5 md:mt-[200px] md:mx-0'>
 
-            {/* <h1 className=' self-start text-white'>FAQ</h1> */}
-
             <div className=' flex flex-col gap-10 w-auto md:w-[80rem]'>
                 <h1 className=' self-start text-white text-4xl font-bold'>FAQ</h1>
 
