@@ -33,13 +33,13 @@ const Page = () => {
     };
 
     return (
-        <main className='flex flex-col mt-[240px] items-center gap-10 md:mt-[150px]'>
+        <main className='flex flex-col mt-[280px] items-center gap-10 md:mt-[150px]'>
             <h1 className=' text-white text-4xl font-bold'>Contact Us</h1>
 
             <div className=' flex flex-wrap gap-8'>
 
                 <div className='border border-[#ffffff6f] rounded-[10px] bg-[#0000003f] p-5 flex flex-wrap justify-center gap-10 mx-2 md:mx-0'>
-                    <div className='flex flex-col text-white gap-5 mt-2'>
+                    <div className='flex flex-col text-white gap-5 pt-5'>
                         <h1 className=' text-4xl font-bold text-white'>Let's stay in touch</h1>
 
                         <div className=' flex flex-row gap-1'>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@libsql/client": "^0.14.0",
     "@next/font": "^14.2.15",
     "dotenv": "^16.4.5",
@@ -19,12 +20,14 @@
     "nanoid": "^5.0.7",
     "next": "14.2.15",
     "next-auth": "5.0.0-beta.25",
+    "nodemailer": "^6.9.16",
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "18.3.11",
     "drizzle-kit": "^0.26.2",
     "postcss": "^8",

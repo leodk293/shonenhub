@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Page() {
     return (
-        <main className='mt-[240px] flex flex-col items-center mx-5 md:mt-[200px] md:mx-0'>
+        <main className='mt-[280px] flex flex-col items-center mx-5 md:mt-[200px] md:mx-0'>
 
             {/* <h1 className=' self-start text-white'>FAQ</h1> */}
 
