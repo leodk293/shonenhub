@@ -41,19 +41,14 @@ const Nav = () => {
                     value={animeName}
                 />
                 <datalist id='anime'>
-                    {/* {animeList.map((anime, index) => (
-                        <option
-                            value={anime}
-                            key={index}
-                        />
-                    ))} */}
-
+                   
                     {tabAnime.map((anime, index) => (
                         <option
                             value={anime}
                             key={index}
                         />
                     ))}
+                    
                 </datalist>
             </form>
         </div>

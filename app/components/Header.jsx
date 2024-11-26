@@ -82,7 +82,7 @@ export default async function Header() {
                                 }}
                             >
                                 <button
-                                    className=' self-center border border-transparent text-white rounded-[50px] bg-blue-900 px-5 py-2 font-semibold text-[15px] flex flex-row hover:bg-blue-700 duration-200'
+                                    className=' self-center text-[17px] border border-transparent bg-blue-900 w-[120px] rounded-[30px] p-2 font-semibold text-white hover:bg-blue-700 duration-200'
                                 >
                                     Signout
                                 </button>
