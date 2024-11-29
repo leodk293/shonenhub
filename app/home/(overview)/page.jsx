@@ -76,7 +76,7 @@ export default function page() {
                   <div key={anime.mal_id} className='flex flex-col hover:translate-y-[-5px] duration-300'>
                     <Link key={anime.mal_id} href={`/anime/${anime.mal_id}`}>
 
-                      <img
+                      <Image
                         className='border-2 border-gray-400 w-[150px] hover:brightness-50 duration-300 object-cover md:rounded-tl-[5px] md:rounded-tr-[5px] md:w-[250px] md:h-[23rem]'
                         width={250}
                         height={200}

@@ -83,7 +83,7 @@ export default function Page({ params }) {
                                 <div className=' w-auto md:w-[50rem]'>
                                 </div>
                                 
-                                <img
+                                <Image
                                     src={character.data.images.jpg.image_url}
                                     alt={character.data.name}
                                     width={200}

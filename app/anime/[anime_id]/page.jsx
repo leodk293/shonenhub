@@ -144,7 +144,7 @@ const Page = ({ params }) => {
                   <h1 className='text-purple-700 text-2xl font-bold text-center md:text-3xl md:w-[65rem] md:leading-9'>{animeData.data.title} ({animeData.data.title_japanese})</h1>
                   <div className=' flex flex-wrap justify-center mt-10 gap-5 '>
 
-                    <img
+                    <Image
                       width={400}
                       height={400}
                       className='border bg-gray-100 w-[250px] border-1 border-gray-100 rounded-[5px] object-cover md:w-[400px] '
@@ -290,7 +290,7 @@ const Page = ({ params }) => {
                                   href={`/anime/${params.anime_id}/characters/${chrt.character.mal_id}`}
                                 >
                                   <div className={`flex flex-col gap-1 border border-slate-500 rounded-[5px] p-2 ${chrt.role === "Main" ? "bg-[#070736]" : "bg-slate-800"}`}>
-                                    <img
+                                    <Image
                                       className=' object-cover border border-slate-700 rounded-[5px]'
                                       src={chrt.character.images.jpg.image_url}
                                       width={150}
@@ -344,7 +344,7 @@ const Page = ({ params }) => {
                             recommended.map((anime) => (
                               <Link key={anime.entry.mal_id} href={`/anime/${anime.entry.mal_id}`}>
                                 <div className="w-[150px] h-[200px]">
-                                  <img
+                                  <Image
                                     width={150}
                                     height={250}
                                     alt={anime.title}
