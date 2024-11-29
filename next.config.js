@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
-//require('dotenv').config();
 const nextConfig = {
     images: {
-        domains: ['cdn.myanimelist.net','lh3.googleusercontent.com'],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "cdn.myanimelist.net", 
+            },
+            {
+                protocol: "https",
+                hostname: "lh3.googleusercontent.com",
+            },
+        ],
     },
 };
 

@@ -67,10 +67,6 @@ export default function Page({ params }) {
                         character.data &&
                         <div className=' flex flex-col items-center'>
 
-                            {/* <h1 className=' text-center font-bold text-white w-auto text-2xl md:text-3xl md:w-[45rem]'>
-                                {character.data.name} of <span className=' text-purple-950'>{character.data.anime[0].anime.title}</span>
-                            </h1> */}
-
                             <div className=' flex flex-col gap-4'>
                                 <h1 className=' font-bold text-white w-auto text-2xl md:text-3xl md:w-[45rem]'>{character.data.name}</h1>
                                 <p className='text-white font-semibold text-[17px] md:text-xl'>Character of
@@ -85,9 +81,9 @@ export default function Page({ params }) {
 
                             <div className=' mt-10 flex flex-col border border-slate-900 bg-[#0000005c] p-10 rounded-[10px] gap-5 items-center'>
                                 <div className=' w-auto md:w-[50rem]'>
-
                                 </div>
-                                <Image
+                                
+                                <img
                                     src={character.data.images.jpg.image_url}
                                     alt={character.data.name}
                                     width={200}
