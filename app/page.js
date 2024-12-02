@@ -227,7 +227,7 @@ export default function Home() {
                             href={`/anime/${element.mal_id}`}
                           >
                             <div className="w-[150px] h-[200px]">
-                              <Image
+                              <img
                                 width={150}
                                 height={250}
                                 alt={element.title}
@@ -262,7 +262,7 @@ export default function Home() {
                         href={`/characters/${character.mal_id}`}
                       >
                         <div className="w-[150px] h-[200px]">
-                          <Image
+                          <img
                             width={150}
                             height={250}
                             alt={character.name}

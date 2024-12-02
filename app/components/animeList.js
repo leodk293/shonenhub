@@ -70,6 +70,7 @@ const tabAnime = [
     'Shangri-La Frontier',
     'No Game No Life',
     'Black Butler',
+    'Hajime no Ippo',
     'Terror in Resonance',
     'Bakemonogatari',
     'Inazuma Eleven',

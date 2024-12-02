@@ -16,7 +16,7 @@ const Logo = () => {
                 <h1 className={` ${lucky.className} self-center`}>Shonenhub</h1>
                 <Image
                     src={Eye}
-                    alt='SHONENHUB LOGO'
+                    alt='LOGO'
                     width={50}
                     height={50}
                     className=' object-cover'

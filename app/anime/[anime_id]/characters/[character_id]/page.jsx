@@ -85,7 +85,7 @@ export default function Page({ params }) {
                                 </div>
 
                                 <div className="flex flex-col border border-slate-900 bg-[#0000005c] p-10 rounded-[10px] gap-5 mt-10 items-center">
-                                    <Image
+                                    <img
                                         src={characterData.data.images.jpg.image_url}
                                         alt={characterData.data.name}
                                         width={200}
@@ -102,7 +102,7 @@ export default function Page({ params }) {
                                     <div className="flex flex-wrap justify-center gap-5">
                                         {characterData.data.voices.slice(0, 5).map((actor) => (
                                             <div key={actor.person.mal_id} className="flex flex-col border border-slate-700 bg-slate-950 p-3 rounded-[5px] gap-2">
-                                                <Image
+                                                <img
                                                     src={actor.person.images.jpg.image_url}
                                                     alt={actor.person.name}
                                                     width={150}
