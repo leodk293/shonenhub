@@ -212,7 +212,10 @@ export default function Home() {
               <p className=' text-center mt-2 text-white font-bold text-xl'>Something went wrong</p>
               :
               recommendedAnime.loading === true ?
-                <p className=' text-center mt-2 text-white font-bold text-xl'>Loading...</p>
+                <div className=" flex flex-col items-center gap-5 mt-2">
+                  <div className="loader" />
+                  <p className=' text-center text-orange-700 font-bold text-xl'>Loading...</p>
+                </div>
                 :
                 (
                   <div
@@ -249,7 +252,11 @@ export default function Home() {
             {topChrts.error === true ?
               <p className=' text-center mt-2 text-red-700 font-bold text-xl'>Something went wrong</p> :
               topChrts.loading === true ?
-                <p className=' text-center mt-2 text-orange-700 font-bold text-xl'>Loading...</p> :
+                <div className=" flex flex-col items-center gap-5 mt-2">
+                  <div className="loader" />
+                  <p className=' text-center text-orange-700 font-bold text-xl'>Loading...</p>
+                </div>
+                :
                 (
                   topChrts.data &&
                   <div
