@@ -33,7 +33,7 @@ const Page = () => {
     };
 
     return (
-        <main className='flex flex-col mt-[280px] items-center gap-10 md:mt-[150px]'>
+        <main className='flex flex-col mt-[320px] items-center gap-10 md:mt-[150px]'>
             <h1 className=' text-white text-4xl font-bold'>Contact Us</h1>
 
             <div className=' flex flex-wrap gap-8'>
